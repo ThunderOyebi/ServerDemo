@@ -7,6 +7,3 @@ node_modules
 # Package Stuff
 package.json
 package-lock.json
-
-# Obsolete Stuff
-/frontend/*
