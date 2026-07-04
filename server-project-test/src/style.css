@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+#thingy {
+    background-color: white;
+    width: 20%;
+}
+
+#account-form {
+    display: flex;
+    flex-direction: column;
+}

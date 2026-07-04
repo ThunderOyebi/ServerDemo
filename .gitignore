@@ -1,0 +1,12 @@
+# Modules Stuff
+node_modules
+
+# Database Stuff
+*.db
+
+# Package Stuff
+package.json
+package-lock.json
+
+# Obsolete Stuff
+/frontend/*
