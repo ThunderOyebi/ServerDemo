@@ -1,35 +1,34 @@
 async function sendFormData() {
-      event.preventDefault()
-      const form = document.getElementById("account-form")
-      const formData = new FormData(form)
-      for (const i of formData)
-      {
-          console.log(i)
-      }
-      // eslint-disable-next-line no-unused-vars
-      const response = await fetch("http://localhost:3000/users", {
-          method: "POST",
-          body: formData
-      })
-  }
+    event.preventDefault()
+    const form = document.getElementById("account-form")
+    const formData = new FormData(form)
+    for (const i of formData)
+    {
+        console.log(i)
+    }
+    // eslint-disable-next-line no-unused-vars
+    const response = await fetch("http://localhost:3000/users", {
+        method: "POST",
+        body: formData
+    })
+}
 
 async function getFormData() {
-      event.preventDefault()
-      const response = await fetch("http://localhost:3000/users", {
-          method: "GET"
-      })
+    event.preventDefault()
+    const response = await fetch("http://localhost:3000/users", {
+        method: "GET"
+    })
 
-      const data = await response.json()
-      console.log(data)
-      for (const i of data)
-      {
-          console.log(i)
-      }
-  }
-  
-function App() {
-  return (
-    <>
+    const data = await response.json()
+    console.log(data)
+    for (const i of data)
+    {
+        console.log(i)
+    }
+}
+
+function FormComponent() {
+    return (
         <div id="thingy">
             <p>Hello World!</p>
             <form id="account-form">
@@ -43,6 +42,13 @@ function App() {
             </form>
             <button id="button-get" onClick={getFormData}>GET</button>
         </div>
+    )
+}
+  
+function App() {
+  return (
+    <>
+       <FormComponent />
     </>
   )
 }
