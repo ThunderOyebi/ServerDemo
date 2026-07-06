@@ -1,6 +1,4 @@
-
-function App() {
-  async function sendFormData() {
+async function sendFormData() {
       event.preventDefault()
       const form = document.getElementById("account-form")
       const formData = new FormData(form)
@@ -15,7 +13,7 @@ function App() {
       })
   }
 
-  async function getFormData() {
+async function getFormData() {
       event.preventDefault()
       const response = await fetch("http://localhost:3000/users", {
           method: "GET"
@@ -28,7 +26,8 @@ function App() {
           console.log(i)
       }
   }
-
+  
+function App() {
   return (
     <>
         <div id="thingy">
