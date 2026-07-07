@@ -2,7 +2,7 @@ async function sendFormData() {
     event.preventDefault()
     const form = document.getElementById("account-form")
     const formData = new FormData(form)
-    
+
     // eslint-disable-next-line no-unused-vars
     const response = await fetch("http://localhost:3000/users", {
         method: "POST",
@@ -26,8 +26,7 @@ async function getFormData() {
 
 function FormComponent() {
     return (
-        <div id="thingy">
-            <p>Hello World!</p>
+        <div id="form-component">
             <form id="account-form">
                     <label htmlFor="Username">Username</label>
                     <input id="Username" type="text" name="Username"/>
@@ -41,11 +40,20 @@ function FormComponent() {
         </div>
     )
 }
+
+function HeaderComponent() {
+    return (
+        <div id="header-component">
+            <p>Hello World!</p>
+        </div>
+    )
+}
   
 function App() {
   return (
     <>
-       <FormComponent />
+        <HeaderComponent />
+        <FormComponent />
     </>
   )
 }
