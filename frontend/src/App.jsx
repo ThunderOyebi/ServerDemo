@@ -2,10 +2,7 @@ async function sendFormData() {
     event.preventDefault()
     const form = document.getElementById("account-form")
     const formData = new FormData(form)
-    for (const i of formData)
-    {
-        console.log(i)
-    }
+    
     // eslint-disable-next-line no-unused-vars
     const response = await fetch("http://localhost:3000/users", {
         method: "POST",
