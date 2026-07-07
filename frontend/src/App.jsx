@@ -48,12 +48,29 @@ function HeaderComponent() {
         </div>
     )
 }
+
+function MainComponent() {
+    return (
+        <div id="main-component">
+            <p>Hello World!</p>
+        </div>
+    )
+}
+
+function FooterComponent() {
+    return (
+        <div id="footer-component">
+            <p>Hello World!</p>
+        </div>
+    )
+}
   
 function App() {
   return (
     <>
         <HeaderComponent />
-        <FormComponent />
+        <MainComponent />
+        <FooterComponent />
     </>
   )
 }
